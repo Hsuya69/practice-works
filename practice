@@ -1,0 +1,17 @@
+c = ["ac","ab","b","d","c","f","g","e"]
+def insort():
+    for i in range(1,len(c)):
+        key = c[i]
+        j=i-1
+        while j>=0 and key<=c[j]:
+            c[j+1]=c[j]
+            j-=1
+            c[j+1]=key
+    print(c)
+insort()
+
+
+
+
+
+

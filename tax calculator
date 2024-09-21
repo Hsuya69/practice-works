@@ -1,0 +1,43 @@
+print("welcome to tax calculator")
+while True:
+    q=input("press y to start  n to quit  \n")
+    if q=="y":
+        while True:
+            a=int(input("enter your INCOME of this year   ="))
+
+            taxb1 = 0<a<=700000
+            taxb2 = 700000<a<=1000000
+            taxb3 = 1000000<a<=1200000  
+            taxb4 = 1200000<a<=1500000
+            taxb5 = 1500000<a
+
+            if taxb1 == True:
+                print("no TAX")
+            elif taxb2 == True:
+                print("YOUR TAX AMOUNT= ",a*10/100)
+            elif taxb3 == True:
+                print("YOUR TAX AMOUNT= ",a*15/100)
+            elif taxb4 == True:
+                print("YOUR TAX AMOUNT= ",a*20/100)
+            elif taxb5 == True:
+                print("YOUR TAX AMOUNT= ",a*30/100)
+            w=input("restart?(y/n)  ")
+            if w == "y":
+                continue
+            elif w == "n":
+                break
+            else:
+                print("enter only y or n  ")
+
+    elif q=="n":
+        print("good bye")
+        break
+    else:
+        print("enter only y or n  ")
+
+
+#MADE BY AYUSH SINHA
+#BCA - 1SEM
+
+
+

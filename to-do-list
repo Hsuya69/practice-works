@@ -1,0 +1,70 @@
+print("TO-DO-LIST")
+print("\n\n\noption menu")
+d={}
+
+while True:
+    print("\n1.enter tasks")
+    print("2.view/edit tasks")
+    print("3.exit")
+    e=int(input("\npress [1,2,3]= "))
+    
+    if e == 1:
+        count = 1
+        while True:
+            t=input("enter tasks[press x to exit]=")
+            if t == "x":
+                break
+            count+=1
+            d[t]="undone"
+    
+    elif e == 2:
+        while True:
+            print("\n")
+            for i in d:
+                print(i,"-",d[i])
+            print("\n1.mark task as done")
+            print("2.mark task as undone")
+            print("3.delete task")
+            print("4.exit")
+            t1=int(input("\npress [1,2,3,4]="))
+            if t1 == 4:
+                break
+            while True:
+                if t1 == 1:
+                    a1=input("enter task name which is done[press x to exit]=")
+                    if a1 == "x":
+                        break
+                    elif a1 in d:
+                        d[a1]="done"
+                    else:
+                        print("no such task available\n")
+                        break
+            
+                if t1 == 2:
+                    a2=input("enter task name which is not done[press x to exit]=")
+                    if a2 == "x":
+                        break
+                    elif a2 in d:
+                        d[a2]="undone"
+                    else:
+                        print("no such task available\n")
+                        break
+
+                if t1 == 3:
+                    a3=input("enter task name to delete[press x to exit]=")
+                    if a3 == "x":
+                        break
+                    elif a3 in d:
+                        d.pop(a3)
+                    else:
+                        print("no such task available\n")
+                        break
+            
+
+        
+    elif e == 3:
+        print("good byee (:")
+        break
+
+    else:
+        print("invalid input")
